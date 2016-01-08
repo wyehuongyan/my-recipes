@@ -7,33 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <%= link_to "myRecipes", "", class: "navbar-brand", id: "logo" %>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav nav">
-          <li class="nav_item">
-            <%= link_to "link 1", "" %>
-          </li>
-          <li class="nav_item">
-            <%= link_to "link 1", "" %>
-          </li>
-          <li class="nav_item">
-            <%= link_to "link 1", "" %>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
+  <%= render 'layouts/navigation' %>
 
   <div class="container">
     <%= yield %>
 
-    <div class="footer">
-      <p>&copy; MyRecipes 2016</p>
-    </div>
+    <%= render 'layouts/footer' %>
   </div>
 
 </body>
